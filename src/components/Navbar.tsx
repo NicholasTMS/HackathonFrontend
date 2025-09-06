@@ -3,13 +3,12 @@ import {
     NavigationMenu,
     NavigationMenuList,
     NavigationMenuItem,
-    NavigationMenuTrigger,
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
 
 export default function Navbar() {
     return (
-        <header className="bg-black text-white p-4 relative z-40">
+        <header className="bg-black text-white p-4 z-40 sticky top-0"> {/* z is the layering hierarchy index(higher means on top), stick top-0 makes it stick to the top at all times*/}
             <div className="w-full px-6 flex items-center justify-between">
 
                 {/* LEFT SIDE - Logo */}
@@ -34,9 +33,20 @@ export default function Navbar() {
 
                         {/* Courses */}
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger className="bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors">
+                            <NavigationMenuLink asChild>
+                                <NavLink
+                                    to="/course"
+                                    className={({ isActive }) =>
+                                        `px-4 py-2 rounded-md transition-colors ${
+                                            isActive
+                                                ? "bg-white text-black"
+                                                : "bg-black text-white hover:bg-white hover:text-black"
+                                        }`
+                                    }
+                                >
                                 Courses
-                            </NavigationMenuTrigger>
+                                </NavLink>
+                            </NavigationMenuLink>
                         </NavigationMenuItem>
 
                         {/* Teach */}
