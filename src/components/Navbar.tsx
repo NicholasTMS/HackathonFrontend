@@ -1,67 +1,113 @@
+import { Link, NavLink } from "react-router-dom"
 import {
     NavigationMenu,
     NavigationMenuList,
     NavigationMenuItem,
     NavigationMenuTrigger,
-    NavigationMenuContent,
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
 
 export default function Navbar() {
     return (
         <header className="bg-black text-white p-4 relative z-40">
-            <div className="w-full flex justify-between items-center px-6">
-                {/* Logo */}
-                <h1 className="text-xl font-bold">Tulearn</h1>
+            <div className="w-full px-6 flex items-center justify-between">
 
-                {/* Nav menu */}
-                <NavigationMenu className="h-14 px-6 flex items-center">
-                    <NavigationMenuList className="flex items-center gap-6">
-                        {/* Dropdown menu */}
+                {/* LEFT SIDE - Logo */}
+                <NavigationMenu>
+                    <NavigationMenuList>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger
-                                className="bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors"
-                            >
-                                Services
+                            <NavigationMenuLink asChild>
+                                <Link
+                                    to="/"
+                                    className="text-xl font-bold hover:opacity-80 transition"
+                                >
+                                    TULEARN
+                                </Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu>
+
+                {/* RIGHT SIDE - Nav links */}
+                <NavigationMenu>
+                    <NavigationMenuList className="flex items-center gap-6">
+
+                        {/* Courses */}
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger className="bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors">
+                                Courses
                             </NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid gap-3 p-4 w-[200px]">
-                                    <li>
-                                        <NavigationMenuLink
-                                            href="/design"
-                                            className="hover:bg-gray-100 block rounded p-2"
-                                        >
-                                            UI/UX Design
-                                        </NavigationMenuLink>
-                                    </li>
-                                    <li>
-                                        <NavigationMenuLink
-                                            href="/dev"
-                                            className="hover:bg-gray-100 block rounded p-2"
-                                        >
-                                            Development
-                                        </NavigationMenuLink>
-                                    </li>
-                                </ul>
-                            </NavigationMenuContent>
                         </NavigationMenuItem>
 
-                        {/* Regular links styled as buttons */}
+                        {/* Teach */}
                         <NavigationMenuItem>
-                            <NavigationMenuLink
-                                href="/about"
-                                className="bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors"
-                            >
-                                About
+                            <NavigationMenuLink asChild>
+                                <NavLink
+                                    to="/teach"
+                                    className={({ isActive }) =>
+                                        `px-4 py-2 rounded-md transition-colors ${
+                                            isActive
+                                                ? "bg-white text-black"
+                                                : "bg-black text-white hover:bg-white hover:text-black"
+                                        }`
+                                    }
+                                >
+                                    Teach
+                                </NavLink>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
 
+                        {/* Roadmaps */}
                         <NavigationMenuItem>
-                            <NavigationMenuLink
-                                href="/contact"
-                                className="bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-black transition-colors"
-                            >
-                                Contact
+                            <NavigationMenuLink asChild>
+                                <NavLink
+                                    to="/roadmaps"
+                                    className={({ isActive }) =>
+                                        `px-4 py-2 rounded-md transition-colors ${
+                                            isActive
+                                                ? "bg-white text-black"
+                                                : "bg-black text-white hover:bg-white hover:text-black"
+                                        }`
+                                    }
+                                >
+                                    Roadmaps
+                                </NavLink>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+
+                        {/* Login */}
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
+                                <NavLink
+                                    to="/login"
+                                    className={({ isActive }) =>
+                                        `px-4 py-2 rounded-md transition-colors ${
+                                            isActive
+                                                ? "bg-white text-black"
+                                                : "bg-black text-white hover:bg-white hover:text-black"
+                                        }`
+                                    }
+                                >
+                                    Login
+                                </NavLink>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+
+                        {/* Sign Up */}
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
+                                <NavLink
+                                    to="/signup"
+                                    className={({ isActive }) =>
+                                        `px-4 py-2 rounded-md transition-colors ${
+                                            isActive
+                                                ? "bg-white text-black"
+                                                : "bg-black text-white hover:bg-white hover:text-black"
+                                        }`
+                                    }
+                                >
+                                    Sign Up
+                                </NavLink>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
@@ -70,6 +116,14 @@ export default function Navbar() {
         </header>
     )
 }
+
+
+
+
+
+
+
+
 
 
 

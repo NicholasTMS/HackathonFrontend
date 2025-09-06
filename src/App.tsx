@@ -1,17 +1,20 @@
 import Navbar from "./components/Navbar"
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
     return (
         <>
             <Navbar />
-            <main className="p-6">
-                <h2 className="text-2xl">Welcome to the Hackathon App 🚀</h2>
-            </main>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
         </>
     )
 }
 
 export default App
+
 
 // pnpm run dev - run in developer mode
 // pnpm build - build in production mode when we want to push
