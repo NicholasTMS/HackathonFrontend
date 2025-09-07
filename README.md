@@ -1,4 +1,4 @@
-Track: 
+#Track: 
 Student Lifestyle
 
 
@@ -6,7 +6,7 @@ Student Lifestyle
 Tutoring for Students
 (Website/ Mobile Application)
 
-#Background:
+Background:
 Many students struggle with academic challenges, including difficulty understanding course material, limited access to personalized help, and inefficient study habits. 
 The problem:
 Traditional tutoring services are often expensive, inconvenient, or unavailable outside of fixed hours, leaving students without adequate support when they need it most. This gap hinders academic performance, increases stress, and discourages independent learning.
