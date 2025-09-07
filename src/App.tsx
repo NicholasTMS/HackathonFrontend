@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
-import Course from "./pages/Course"
+import Course from "./pages/Courses.tsx"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Teach from "./pages/Teach"
