@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 export default function Teach() {
     const [courses, setCourses] = useState([
-        { title: "React for Beginners", status: "Published" },
-        { title: "Advanced TypeScript", status: "Draft" },
+        { title: "Algebra Basics", status: "Published" },
+        { title: "Calculus", status: "Draft" },
     ]);
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
