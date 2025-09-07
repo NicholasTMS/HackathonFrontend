@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Signup() {
+    const [role, setRole] = useState<"Student" | "Tutor">("Student");
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -34,6 +37,35 @@ export default function Signup() {
                         />
                     </div>
 
+                    {/* Role Radio Buttons */}
+                    <div>
+                        <span className="block text-sm font-medium mb-1">Choose a role</span>
+                        <div className="flex gap-4">
+                            <label className="flex items-center gap-2">
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="Student"
+                                    checked={role === "Student"}
+                                    onChange={() => setRole("Student")}
+                                    className="form-radio h-4 w-4 text-indigo-600"
+                                />
+                                Student
+                            </label>
+                            <label className="flex items-center gap-2">
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="Tutor"
+                                    checked={role === "Tutor"}
+                                    onChange={() => setRole("Tutor")}
+                                    className="form-radio h-4 w-4 text-indigo-600"
+                                />
+                                Tutor
+                            </label>
+                        </div>
+                    </div>
+
                     <button
                         type="submit"
                         className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md transition"
@@ -50,5 +82,6 @@ export default function Signup() {
                 </p>
             </div>
         </div>
-    )
+    );
 }
+
