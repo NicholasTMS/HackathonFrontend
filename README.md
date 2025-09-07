@@ -51,3 +51,4 @@ We acknowledge that some essential features, such as payment processing and auth
 2.Authentication
 3.Backend support (databases, APIs, etc)
 4.Security (most likely under HTTPS or whatever security feature related to our backend will be)
+5.AI driven recommendations
