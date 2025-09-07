@@ -5,6 +5,7 @@ import Course from "./pages/Course"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Teach from "./pages/Teach"
+import Roadmaps from "./pages/Roadmaps"
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/teach" element={<Teach />} />
+                <Route path="/roadmaps" element={<Roadmaps />} />
             </Routes>
         </>
     )
