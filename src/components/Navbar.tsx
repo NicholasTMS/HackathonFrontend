@@ -35,7 +35,7 @@ export default function Navbar() {
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild>
                                 <NavLink
-                                    to="/course"
+                                    to="/courses"
                                     className={({ isActive }) =>
                                         `px-4 py-2 rounded-md transition-colors ${
                                             isActive
