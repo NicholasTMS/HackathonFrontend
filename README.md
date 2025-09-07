@@ -1,69 +1,38 @@
-# React + TypeScript + Vite
+Track: 
+Student Lifestyle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+#Problem Statement:
+Tutoring for Students
+(Website/ Mobile Application)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Background:
+Many students struggle with academic challenges, including difficulty understanding course material, limited access to personalized help, and inefficient study habits. 
+The problem:
+Traditional tutoring services are often expensive, inconvenient, or unavailable outside of fixed hours, leaving students without adequate support when they need it most. This gap hinders academic performance, increases stress, and discourages independent learning.
+What the solution should solve:
+Develop a tutoring platform that provides on-demand, affordable, and personalized academic assistance. The platform will connect students with qualified tutors (which may be other students), offer interactive learning tools, and provide access to curated study resources. By making tutoring more accessible and effective, this solution should enhance learning outcomes, boost student confidence, and promote academic success for students of all levels.
+Examples of features:
+Key features include real-time tutoring sessions, progress tracking, AI-driven recommendations, and collaborative study aids. To build this platform, participants can use technologies like React Native or Flutter for mobile app development, Firebase or Supabase for backend services and real-time updates, OpenAI’s API for intelligent tutor matching and content suggestions, and WebRTC for live video tutoring. 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#Browser routes/urls:
+Since we have not implemented the backend APIs, some pages like the tutor and student dashboards cannot be accessed from the main browser route/url. Thus, we will list every page and their corresponding route here for your convenience:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Default page/Home page - /
+Courses page - /courses
+Teach page - /teach
+Roadmaps page - /roadmaps
+Login page - /login
+Sign up page - /signup
+Tutor Dashboard page - /tutordashboard
+Student Dashboard page -/studentdashboard
+Course Creation form pages - /coursecreationform
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+#Extra considerations/Future plans
+We acknowledge that some essential features, such as payment processing and authentication, are not yet included in the current version. As a team of two working within a limited timeframe, we were unable to implement these features at this stage. However, we plan to integrate them in the near future and will provide a list of upcoming features to outline our roadmap and commitment to continuous improvement.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.Payment Processing
+2.Authentication
+3.Backend support (databases, APIs, etc)
+4.Security (most likely under HTTPS or whatever security feature related to our backend will be)
