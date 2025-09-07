@@ -1,3 +1,18 @@
+#How to run:
+
+Prerequisistes:
+Node.js must be installed
+
+Steps:
+1. Clone or download this repository.
+2. Open either an IDE's integrated terminal or Windows powershell.
+3. Ensure you are in the project's directory by using the cd command.
+4. Type "pnpm i" or "npm i" to install any lingering dependencies.
+5. Type "pnpm build" to build a working production build.
+6. Type "pnpm start" to start a local server for us to preview the webapp.
+7. Click on the localhost link within the terminal directly or paste this url into any web browser: http://localhost:4173/
+
+
 #Track: 
 Student Lifestyle
 
