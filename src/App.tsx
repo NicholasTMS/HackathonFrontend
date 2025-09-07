@@ -6,7 +6,6 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Roadmaps from "./pages/Roadmaps"
 import Teach from "./pages/Teach"
-import DTeach from "./pages/DTeach"
 import TutorDashboard from "./pages/TutorDashboard"
 import StudentDashboard from "./pages/StudentDashboard"
 import CourseCreationForm from "./pages/CourseCreationForm"
@@ -22,7 +21,6 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/roadmaps" element={<Roadmaps />} />
                 <Route path="/teach" element={<Teach />} />
-                <Route path="/dashboardteach" element={<DTeach />} /> {/*possibly remove*/}
                 <Route path="/tutordashboard" element={<TutorDashboard />} />
                 <Route path="/coursecreationform" element={<CourseCreationForm />} />
                 <Route path="/studentdashboard" element={<StudentDashboard />} />
